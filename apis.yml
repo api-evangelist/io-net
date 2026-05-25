@@ -1,0 +1,305 @@
+aid: io-net
+name: io.net
+description: >-
+  io.net is a decentralized GPU network for AI compute, built on Solana, that
+  aggregates idle consumer and data-center GPUs (NVIDIA A100, H100, H200, and
+  Blackwell-class) into on-demand, geo-distributed compute clusters orchestrated
+  with the Ray framework. The platform exposes a Web3-native alternative to
+  hyperscaler GPU cloud through several developer-facing surfaces: IO
+  Intelligence (an OpenAI-compatible inference API for 15+ open-source models
+  including Llama 3.3 70B), IO Cloud (Container-as-a-Service and VM-as-a-Service
+  APIs for deploying GPU containers, Ray clusters, Kubernetes clusters, and
+  bare-metal instances), IO Agents (agent and agentic-workflow APIs), IO
+  Explorer (a network analytics API for devices, clusters, and block rewards),
+  IO Worker (the supplier-side onboarding stack), IO ID (the account/wallet
+  hub), and IO Staking. Confidential Compute on Intel TDX-enabled H100/H200/B200
+  GPUs and a remote attestation service for Intel TDX and NVIDIA H200
+  confidential VMs round out the security surface. The IO token is an SPL token
+  on Solana used for settlement, staking, and rewards; fiat and USDC payments
+  are accepted and converted to IO. io.net also publishes an MCP server at
+  mcp.io.solutions for agent-driven cluster provisioning. The platform's tagline
+  is "the open-source AI infrastructure platform" and its commercial pitch is
+  AI compute at 50–70% below comparable hyperscaler rates.
+url: https://raw.githubusercontent.com/api-evangelist/io-net/refs/heads/main/apis.yml
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - Artificial Intelligence
+  - GPU
+  - Decentralized Compute
+  - DePIN
+  - Web3
+  - Solana
+  - Inference
+  - LLM
+  - Distributed Computing
+  - Ray
+  - Kubernetes
+  - Containers
+  - Confidential Compute
+  - Agents
+  - MCP
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: io-net:io-intelligence-api
+    name: IO Intelligence API
+    description: >-
+      OpenAI-compatible inference API for open-source AI models hosted on
+      io.net's decentralized GPU network. Exposes /v1/models and
+      /v1/chat/completions over the base URL
+      https://api.intelligence.io.solutions/api/v1, accepts Bearer-token
+      authentication, and supports streaming, vision (image upload), reasoning
+      content, and a shared usage pool across 15+ models including
+      meta-llama/Llama-3.3-70B-Instruct. Designed as a drop-in replacement for
+      the OpenAI SDK — install `openai` (Python or Node.js) and point base_url
+      at api.intelligence.io.solutions.
+    humanURL: https://io.net/docs/guides/intelligence/io-intelligence-apis
+    baseURL: https://api.intelligence.io.solutions/api/v1
+    tags:
+      - AI
+      - Inference
+      - LLM
+      - OpenAI-compatible
+      - Chat Completions
+      - Vision
+      - Streaming
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/intelligence/io-intelligence-apis
+      - type: Documentation
+        url: https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api
+      - type: Portal
+        url: https://ai.io.net
+      - type: SignUp
+        url: https://ai.io.net/ai/api-keys
+      - type: Authentication
+        url: https://io.net/docs/guides/intelligence/io-intelligence-apis
+  - aid: io-net:io-agents-api
+    name: IO Agents API
+    description: >-
+      REST API for discovering, configuring, and running AI agents and
+      agentic workflows on io.net's no-code workflow editor. Supports agent
+      discovery, workflow execution, workflow-schema retrieval, and CRUD on
+      per-agent secrets.
+    humanURL: https://io.net/docs/guides/intelligence
+    tags:
+      - AI
+      - Agents
+      - Workflows
+      - Automation
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/intelligence
+      - type: Documentation
+        url: https://io.net/docs/guides/clouds/agent-cloud
+  - aid: io-net:io-cloud-caas-api
+    name: IO Cloud Container-as-a-Service API
+    description: >-
+      Container-as-a-Service REST API for deploying GPU-backed containers
+      across io.net's decentralized network. Operations include container
+      deployment and termination, real-time log streaming, replica
+      availability and capacity checks per GPU hardware type, deployment
+      configuration updates, and price estimation. Backed by the same
+      orchestration layer that powers IO Cloud's Ray and Kubernetes options.
+    humanURL: https://io.net/docs/guides/clouds/io-cloud
+    tags:
+      - GPU
+      - Containers
+      - CaaS
+      - Deployment
+      - Distributed Computing
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/clouds/io-cloud
+      - type: Documentation
+        url: https://docs.io.net/docs/start-using-io-cloud
+  - aid: io-net:io-cloud-vmaas-api
+    name: IO Cloud VM-as-a-Service API
+    description: >-
+      VM-as-a-Service REST API for provisioning, extending, and terminating
+      GPU virtual machines on io.net. Surfaces hardware availability and
+      pricing, supports multi-VM cluster orchestration, and exposes job
+      history for billing and audit.
+    humanURL: https://io.net/docs/guides/clouds/io-cloud
+    tags:
+      - GPU
+      - VMs
+      - Compute
+      - Bare Metal
+      - Clusters
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/clouds/io-cloud
+      - type: Documentation
+        url: https://docs.io.net/docs/deploy-ray-cluster
+  - aid: io-net:io-explorer-api
+    name: IO Explorer API
+    description: >-
+      Network analytics API exposing device summaries and detailed metrics,
+      block-reward analysis, proof-of-work challenge tracking, and device
+      notifications. Powers the public IO Explorer dashboard and is suitable
+      for partner monitoring and on-chain reward attestation.
+    humanURL: https://explorer.io.net
+    tags:
+      - Analytics
+      - Monitoring
+      - DePIN
+      - Block Rewards
+      - Proof of Work
+    properties:
+      - type: Documentation
+        url: https://io.net/docs
+      - type: Dashboard
+        url: https://explorer.io.net
+  - aid: io-net:io-sub-api-key-api
+    name: IO Sub-API Key Management API
+    description: >-
+      Administrative API for creating scoped sub-API keys with per-model
+      restrictions and per-key credit limits, tracking usage and aggregated
+      spend, and revoking keys. Designed for teams and partners reselling or
+      proxying io.net inference.
+    humanURL: https://ai.io.net/ai/api-keys
+    tags:
+      - Administrative
+      - API Keys
+      - Access Control
+      - FinOps
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/intelligence/io-intelligence-apis
+      - type: Portal
+        url: https://ai.io.net/ai/api-keys
+  - aid: io-net:io-cloud-mcp-server
+    name: IO Cloud MCP Server
+    description: >-
+      Hosted Model Context Protocol server at https://mcp.io.solutions/mcp
+      that exposes IO Cloud provisioning and management tools to MCP-aware
+      agents (Claude Desktop, Claude Code, Cursor, etc.). Authenticates via
+      the `x-api-key` header using an io.net API key with io-cloud project
+      scope.
+    humanURL: https://io.net/docs/guides/clouds/agent-cloud
+    baseURL: https://mcp.io.solutions/mcp
+    tags:
+      - MCP
+      - Agents
+      - GPU
+      - Tool Use
+    properties:
+      - type: Documentation
+        url: https://io.net/docs/guides/clouds/agent-cloud
+  - aid: io-net:cc-attestation-agent-api
+    name: Confidential Compute Attestation Agent API
+    description: >-
+      Open-source FastAPI remote attestation service for Intel TDX and NVIDIA
+      H200 confidential VMs operating on the io.net network. Issues
+      verifiable cryptographic attestations that a workload is running inside
+      a Trusted Execution Environment with the expected firmware and GPU
+      state. Source published at github.com/ionet-official/cc-attestation-agent-api
+      under MIT.
+    humanURL: https://github.com/ionet-official/cc-attestation-agent-api
+    tags:
+      - Confidential Compute
+      - Attestation
+      - Security
+      - Intel TDX
+      - NVIDIA H200
+      - TEE
+    properties:
+      - type: SourceCode
+        url: https://github.com/ionet-official/cc-attestation-agent-api
+      - type: Documentation
+        url: https://io.net/docs
+common:
+  - type: Website
+    url: https://io.net
+  - type: Portal
+    url: https://io.net
+  - type: Documentation
+    url: https://io.net/docs
+  - type: Documentation
+    url: https://docs.io.net
+  - type: GettingStarted
+    url: https://io.net/docs
+  - type: APIReference
+    url: https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api
+  - type: Intelligence
+    url: https://io.net/intelligence
+  - type: Cloud
+    url: https://io.net/cloud
+  - type: Explorer
+    url: https://explorer.io.net
+  - type: SignUp
+    url: https://ai.io.net
+  - type: Console
+    url: https://ai.io.net
+  - type: APIKeys
+    url: https://ai.io.net/ai/api-keys
+  - type: GitHubOrganization
+    url: https://github.com/ionet-official
+  - type: SourceCode
+    url: https://github.com/ionet-official/cc-attestation-agent-api
+  - type: SourceCode
+    url: https://github.com/ionet-official/io-net-official-setup-script
+  - type: SourceCode
+    url: https://github.com/ionet-official/io_launch_binaries
+  - type: SourceCode
+    url: https://github.com/ionet-official/docs
+  - type: SourceCode
+    url: https://github.com/ionet-official/io-ray-serve-chat-demo
+  - type: Blog
+    url: https://io.net/blog
+  - type: Twitter
+    url: https://twitter.com/ionet
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/io-net
+  - type: Medium
+    url: https://ionet.medium.com
+  - type: Discord
+    url: https://discord.gg/ionet
+  - type: Token
+    url: https://io.net/token
+  - type: Tokenomics
+    url: https://io.net/token
+  - type: Staking
+    url: https://io.net/staking
+  - type: TermsOfService
+    url: https://io.net/terms
+  - type: PrivacyPolicy
+    url: https://io.net/privacy
+  - type: Features
+    data:
+      - IO Intelligence — OpenAI-compatible inference API for 15+ open-source models including Llama 3.3 70B
+      - IO Cloud — decentralized GPU compute spanning Container-as-a-Service, Ray clusters, Kubernetes clusters, and bare-metal
+      - IO Agents — agentic workflow builder with no-code visual editor and Agents API
+      - IO Explorer — network analytics, device and cluster metrics, block-reward tracking, proof-of-work transparency
+      - IO Worker — supplier-side onboarding for GPU providers across Ubuntu, Windows, macOS, HiveOS
+      - IO ID — unified user dashboard for wallets, credits, usage, and withdrawals
+      - IO Staking — device-owner staking plus collaborative co-staking with reliability scoring
+      - Confidential Compute on Intel TDX-enabled H100/H200/B200 GPUs with remote attestation
+      - Confidential Inference with cryptographic proof of secure execution
+      - MCP server at mcp.io.solutions for agent-driven IO Cloud provisioning
+      - Built on Solana — IO is an SPL token; fiat and USDC payments accepted and converted to IO
+      - Ray framework orchestration for distributed AI workloads
+      - Sub-API keys with per-model restrictions and per-key credit limits
+      - Vision (image upload) and reasoning content supported on IO Intelligence
+      - OpenAI SDK drop-in compatibility (`openai` Python / Node) with custom base_url
+      - Stripe / fiat credit-card billing alongside crypto settlement
+      - Pitched at 50–70% below hyperscaler GPU pricing
+    sources:
+      - https://io.net/docs
+      - https://io.net/docs/guides/intelligence/io-intelligence-apis
+      - https://io.net/docs/guides/clouds/io-cloud
+      - https://io.net/docs/guides/clouds/agent-cloud
+      - https://io.net/intelligence
+      - https://github.com/ionet-official
+    updated: '2026-05-25'
+position: Consuming
+kind: contract
+access: 3rd-Party
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
+    X: apievangelist
+    url: https://apievangelist.com
