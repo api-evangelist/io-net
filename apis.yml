@@ -21,7 +21,7 @@ description: >-
   is "the open-source AI infrastructure platform" and its commercial pitch is
   AI compute at 50–70% below comparable hyperscaler rates.
 url: https://raw.githubusercontent.com/api-evangelist/io-net/refs/heads/main/apis.yml
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Artificial Intelligence
