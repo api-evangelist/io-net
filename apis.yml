@@ -72,7 +72,7 @@ apis:
         url: https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api
       - type: Portal
         url: https://ai.io.net
-      - type: SignUp
+      - type: Signup
         url: https://ai.io.net/ai/api-keys
       - type: Authentication
         url: https://io.net/docs/guides/intelligence/io-intelligence-apis
@@ -230,7 +230,7 @@ common:
     url: https://io.net/cloud
   - type: Explorer
     url: https://explorer.io.net
-  - type: SignUp
+  - type: Signup
     url: https://ai.io.net
   - type: Console
     url: https://ai.io.net

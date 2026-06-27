@@ -3,19 +3,12 @@
   "feeds": [
     {
       "source": "https://io.net/blog",
-      "feed_url": "https://io.net/blog",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
-      "source": "https://github.com/ionet-official/io-ray-serve-chat-demo",
-      "feed_url": "https://github.com/ionet-official/io-ray-serve-chat-demo",
-      "title": "",
-      "saved": 0,
-      "method": "none"
+      "feed_url": "",
+      "saved": 2,
+      "method": "agent-scrape"
     }
   ],
-  "post_count": 2,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 6,
+  "fetched": "2026-06-27T12:48:41Z",
+  "agent_pulled": "2026-06-27"
 }
