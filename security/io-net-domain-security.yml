@@ -1,0 +1,34 @@
+generated: '2026-07-11'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: io.net
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 20 14:50:58 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: api.intelligence.io.solutions
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 21 16:19:28 2026 GMT
+  hsts: null
+- host: explorer.io.net
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 20 14:50:58 2026 GMT
+  hsts: true
+  hsts_max_age: 86400
+domains:
+- domain: io.net
+  dnssec: true
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
+- domain: io.solutions
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

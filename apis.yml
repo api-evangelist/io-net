@@ -212,6 +212,8 @@ apis:
       - type: Documentation
         url: https://io.net/docs
 common:
+  - type: DomainSecurity
+    url: security/io-net-domain-security.yml
   - type: Website
     url: https://io.net
   - type: Portal
