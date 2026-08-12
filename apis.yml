@@ -223,6 +223,19 @@ apis:
       - type: Documentation
         url: https://io.net/docs
 common:
+  - type: IssueTracker
+    url: https://github.com/ionet-official/cc-attestation-agent-api/issues
+  - type: Releases
+    url: https://github.com/ionet-official/cc-attestation-agent-api/releases
+  - type: SecurityPolicy
+    url: https://github.com/ionet-official/cc-attestation-agent-api/blob/main/SECURITY.md
+  - type: CodeOfConduct
+    url: https://github.com/ionet-official/cc-attestation-agent-api/blob/main/CODE_OF_CONDUCT.md
+  - type: ContributionGuide
+    url: https://github.com/ionet-official/cc-attestation-agent-api/blob/main/CONTRIBUTING.md
+  - type: License
+    name: MIT
+    url: https://github.com/ionet-official/cc-attestation-agent-api/blob/main/LICENSE
   - type: DomainSecurity
     url: security/io-net-domain-security.yml
   - type: Website
