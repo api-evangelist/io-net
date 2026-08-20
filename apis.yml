@@ -34,6 +34,22 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/io-net.png
 tags:
+  - Artificial Intelligence
+  - GPU
+  - Decentralized Compute
+  - DePIN
+  - Web3
+  - Solana
+  - Inference
+  - LLM
+  - Distributed Computing
+  - Ray
+  - Kubernetes
+  - Containers
+  - Confidential Compute
+  - Agents
+  - MCP
+tags_raw:
   - AI
   - Artificial Intelligence
   - GPU
@@ -69,6 +85,14 @@ apis:
     humanURL: https://io.net/docs/guides/intelligence/io-intelligence-apis
     baseURL: https://api.intelligence.io.solutions/api/v1
     tags:
+      - Artificial Intelligence
+      - Inference
+      - LLM
+      - OpenAI-Compatible
+      - Chat Completions
+      - Vision
+      - Streaming
+    tags_raw:
       - AI
       - Inference
       - LLM
@@ -96,6 +120,11 @@ apis:
       per-agent secrets.
     humanURL: https://io.net/docs/guides/intelligence
     tags:
+      - Artificial Intelligence
+      - Agents
+      - Workflows
+      - Automation
+    tags_raw:
       - AI
       - Agents
       - Workflows
@@ -139,6 +168,12 @@ apis:
       - VMs
       - Compute
       - Bare Metal
+      - Cluster
+    tags_raw:
+      - GPU
+      - VMs
+      - Compute
+      - Bare Metal
       - Clusters
     properties:
       - type: Documentation
@@ -173,6 +208,11 @@ apis:
       proxying io.net inference.
     humanURL: https://ai.io.net/ai/api-keys
     tags:
+      - Administrative
+      - APIKeys
+      - Access Control
+      - FinOps
+    tags_raw:
       - Administrative
       - API Keys
       - Access Control
