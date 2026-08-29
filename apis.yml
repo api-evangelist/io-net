@@ -21,6 +21,19 @@ description: >-
   is "the open-source AI infrastructure platform" and its commercial pitch is
   AI compute at 50–70% below comparable hyperscaler rates.
 url: https://raw.githubusercontent.com/api-evangelist/io-net/refs/heads/main/apis.yml
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
