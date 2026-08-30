@@ -101,7 +101,7 @@ apis:
       - Artificial Intelligence
       - Inference
       - LLM
-      - OpenAI-Compatible
+      - OpenAI-compatible
       - Chat Completions
       - Vision
       - Streaming
