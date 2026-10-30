@@ -1,4 +1,4 @@
-# io.net (io-net)
+# io.net
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,100 +64,97 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-io.net is a decentralized GPU network for AI compute, built on Solana, that aggregates idle consumer and data-center GPUs (NVIDIA A100, H100, H200, Blackwell-class) into on-demand, geo-distributed compute clusters orchestrated with the Ray framework. The platform exposes a Web3-native alternative to hyperscaler GPU cloud through IO Intelligence (an OpenAI-compatible inference API), IO Cloud (Container-as-a-Service, VM-as-a-Service, Ray, Kubernetes, and bare-metal), IO Agents, IO Explorer (network analytics), IO Worker (supplier onboarding), IO ID, and IO Staking, with Confidential Compute on Intel TDX-enabled H100/H200/B200 GPUs and a hosted MCP server for agent-driven provisioning.
+io.net is a decentralized GPU network for AI compute, built on Solana, that aggregates idle consumer and data-center GPUs (NVIDIA A100, H100, H200, and Blackwell-class) into on-demand, geo-distributed compute clusters orchestrated with the Ray framework. The platform exposes a Web3-native alternative to hyperscaler GPU cloud through several developer-facing surfaces: IO Intelligence (an OpenAI-compatible inference API for 15+ open-source models including Llama 3.3 70B), IO Cloud (Container-as-a-Service and VM-as-a-Service APIs for deploying GPU containers, Ray clusters, Kubernetes clusters, and bare-metal instances), IO Agents (agent and agentic-workflow APIs), IO Explorer (a network analytics API for devices, clusters, and block rewards), IO Worker (the supplier-side onboarding stack), IO ID (the account/wallet hub), and IO Staking. Confidential Compute on Intel TDX-enabled H100/H200/B200 GPUs and a remote attestation service for Intel TDX and NVIDIA H200 confidential VMs round out the security surface. The IO token is an SPL token on Solana used for settlement, staking, and rewards; fiat and USDC payments are accepted and converted to IO. io.net also publishes an MCP server at mcp.io.solutions for agent-driven cluster provisioning. The platform's tagline is "the open-source AI infrastructure platform" and its commercial pitch is AI compute at 50–70% below comparable hyperscaler rates.
 
-**URL:** [Visit APIs.yml](https://raw.githubusercontent.com/api-evangelist/io-net/refs/heads/main/apis.yml)
+**Areas:** Artificial Intelligence · GPU · Decentralized Compute · DePIN · Web3 · Solana · Inference · LLM · Distributed Computing · Ray · Kubernetes · Containers
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## io.net on APIs.io
 
-## Tags
+Everything profiled for io.net is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/io-net/](https://apis.io/providers/io-net/)** — or go straight to one of the APIs or properties below.
 
-AI, Artificial Intelligence, GPU, Decentralized Compute, DePIN, Web3, Solana, Inference, LLM, Distributed Computing, Ray, Kubernetes, Containers, Confidential Compute, Agents, MCP
+### APIs (8)
 
-## Timestamps
+- [IO Intelligence API](https://apis.io/apis/io-net/io-intelligence-api/) — OpenAI-compatible inference API for open-source AI models hosted on io.net's decentralized GPU network. Exposes /v1/models and /v1/chat/completions over the…
+- [IO Agents API](https://apis.io/apis/io-net/io-agents-api/) — REST API for discovering, configuring, and running AI agents and agentic workflows on io.net's no-code workflow editor. Supports agent discovery, workflow…
+- [IO Cloud Container-as-a-Service API](https://apis.io/apis/io-net/io-cloud-caas-api/) — Container-as-a-Service REST API for deploying GPU-backed containers across io.net's decentralized network. Operations include container deployment and…
+- [IO Cloud VM-as-a-Service API](https://apis.io/apis/io-net/io-cloud-vmaas-api/) — VM-as-a-Service REST API for provisioning, extending, and terminating GPU virtual machines on io.net. Surfaces hardware availability and pricing, supports…
+- [IO Explorer API](https://apis.io/apis/io-net/io-explorer-api/) — Network analytics API exposing device summaries and detailed metrics, block-reward analysis, proof-of-work challenge tracking, and device notifications.…
+- [IO Sub-API Key Management API](https://apis.io/apis/io-net/io-sub-api-key-api/) — Administrative API for creating scoped sub-API keys with per-model restrictions and per-key credit limits, tracking usage and aggregated spend, and revoking…
+- [IO Cloud MCP Server](https://apis.io/apis/io-net/io-cloud-mcp-server/) — Hosted Model Context Protocol server at https://mcp.io.solutions/mcp that exposes IO Cloud provisioning and management tools to MCP-aware agents (Claude…
+- [Confidential Compute Attestation Agent API](https://apis.io/apis/io-net/cc-attestation-agent-api/) — Open-source FastAPI remote attestation service for Intel TDX and NVIDIA H200 confidential VMs operating on the io.net network. Issues verifiable…
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### IO Intelligence API
-OpenAI-compatible inference API for 15+ open-source models (including `meta-llama/Llama-3.3-70B-Instruct`) over the base URL `https://api.intelligence.io.solutions/api/v1`. Exposes `/v1/models` and `/v1/chat/completions`, uses Bearer-token auth, and supports streaming, vision (image upload), and reasoning content. Drop-in compatible with the `openai` Python and Node SDKs.
+#### Security (1)
 
-**Human URL:** [https://io.net/docs/guides/intelligence/io-intelligence-apis](https://io.net/docs/guides/intelligence/io-intelligence-apis)
+Authentication, trust centre, and vulnerability disclosure.
 
-- [API Reference](https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api)
-- [API Keys Console](https://ai.io.net/ai/api-keys)
+- [Io Net Domain Security](https://apis.io/security/io-net/io-net-domain-security/)
 
-### IO Agents API
-REST API for discovering and running AI agents and agentic workflows on io.net's no-code visual workflow editor. Supports agent discovery, workflow execution, workflow-schema retrieval, and CRUD on per-agent secrets.
+## Where to find this API
 
-**Human URL:** [https://io.net/docs/guides/intelligence](https://io.net/docs/guides/intelligence)
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-### IO Cloud Container-as-a-Service API
-REST API for deploying GPU-backed containers across io.net's decentralized network. Includes container deploy/destroy, real-time logs, replica/capacity checks per GPU hardware type, deployment config updates, and price estimation.
+- [Website](https://io.net)
+- [Documentation](https://io.net/docs)
+- [Getting started](https://io.net/docs)
+- [API reference](https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api)
+- [Blog](https://io.net/blog)
+- [Terms of service](https://io.net/terms)
+- [Privacy policy](https://io.net/privacy)
+- [GitHub](https://github.com/ionet-official)
 
-**Human URL:** [https://io.net/docs/guides/clouds/io-cloud](https://io.net/docs/guides/clouds/io-cloud)
+## API Evangelist rating
 
-### IO Cloud VM-as-a-Service API
-REST API for provisioning, extending, and terminating GPU virtual machines and multi-VM clusters. Exposes hardware availability/pricing and job history.
+**Kin Score 35.9** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Human URL:** [https://io.net/docs/guides/clouds/io-cloud](https://io.net/docs/guides/clouds/io-cloud)
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 57.1 |
+| Access clarity | 34.2 |
 
-### IO Explorer API
-Network analytics API exposing device summaries and detailed metrics, block-reward analysis, proof-of-work challenge tracking, and device notifications. Powers the public IO Explorer dashboard.
+**Agent readiness 2.5** — human-only
 
-**Human URL:** [https://explorer.io.net](https://explorer.io.net)
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-### IO Sub-API Key Management API
-Administrative API for creating scoped sub-API keys with per-model restrictions and per-key credit limits, monitoring aggregated spend, and revoking keys. Designed for teams and partners reselling or proxying io.net inference.
+**Regulatory alignment 18.2** — Horizontal (data, software, accessibility, platform)
 
-**Human URL:** [https://ai.io.net/ai/api-keys](https://ai.io.net/ai/api-keys)
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/io-net/](https://apis.io/providers/io-net/).
 
-### IO Cloud MCP Server
-Hosted Model Context Protocol server at `https://mcp.io.solutions/mcp` exposing IO Cloud provisioning tools to MCP-aware agents (Claude Desktop, Claude Code, Cursor). Authenticates via the `x-api-key` header.
+## How this profile is made
 
-**Human URL:** [https://io.net/docs/guides/clouds/agent-cloud](https://io.net/docs/guides/clouds/agent-cloud)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### Confidential Compute Attestation Agent API
-Open-source FastAPI remote attestation service (MIT) for Intel TDX and NVIDIA H200 confidential VMs running on io.net. Issues verifiable cryptographic attestations.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for io.net: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-**Human URL:** [https://github.com/ionet-official/cc-attestation-agent-api](https://github.com/ionet-official/cc-attestation-agent-api)
+## Open an issue
 
-## Products
-
-| Surface | Audience | What it does |
-|---|---|---|
-| IO Intelligence | AI developers | OpenAI-compatible inference for 15+ open-source models |
-| IO Cloud | ML engineers / Web3 builders | Decentralized GPU clusters (CaaS, VMs, Ray, Kubernetes, bare-metal) |
-| IO Agents | Builders | No-code agentic workflow editor + API |
-| IO Worker | GPU suppliers | Onboarding GPUs into the network (Ubuntu/Windows/macOS/HiveOS) |
-| IO Explorer | Everyone | Real-time network analytics, rewards, device metrics |
-| IO ID | All users | Unified wallet, credits, usage, withdrawals |
-| IO Staking | Suppliers / co-stakers | Device staking and co-staking with reliability scoring |
-| Confidential Compute | Regulated workloads | Intel TDX + H100/H200/B200 + verifiable attestation |
-
-## Common Properties
-
-- [Website — io.net](https://io.net)
-- [Documentation — io.net/docs](https://io.net/docs)
-- [API Reference — IO Intelligence](https://io.net/docs/reference/ai-models/get-started-with-io-intelligence-api)
-- [Intelligence — io.net/intelligence](https://io.net/intelligence)
-- [Console / Sign Up — ai.io.net](https://ai.io.net)
-- [API Keys — ai.io.net/ai/api-keys](https://ai.io.net/ai/api-keys)
-- [Explorer — explorer.io.net](https://explorer.io.net)
-- [GitHub Organization — ionet-official](https://github.com/ionet-official)
-- [Source — cc-attestation-agent-api](https://github.com/ionet-official/cc-attestation-agent-api)
-- [Source — io-net-official-setup-script](https://github.com/ionet-official/io-net-official-setup-script)
-- [Source — io_launch_binaries](https://github.com/ionet-official/io_launch_binaries)
-- [Source — io-ray-serve-chat-demo](https://github.com/ionet-official/io-ray-serve-chat-demo)
-- [Blog — io.net/blog](https://io.net/blog)
-- [Medium — ionet.medium.com](https://ionet.medium.com)
-- [Twitter — @ionet](https://twitter.com/ionet)
-- [LinkedIn — io-net](https://www.linkedin.com/company/io-net)
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/io-net/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
